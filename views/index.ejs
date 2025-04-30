@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Express Workouts</title>
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Express Workouts</h1>
+  </header>
+  
+  <!-- <h2>What are we working on today?</h2>
+  <form action="" method="">
+    <fieldset id="type">
+      <legend>Select and exercise type:</legend>
+        <input class="type" type="checkbox" value="cardio" id="cardio" checked>
+        <label for="cardio">Cardio</label>
+        <input class="type" type="checkbox" value="olympicWeightLifting" id="olympicWeightLifting">
+        <label for="olympicWeightLifting">Olympic Weightlifting</label>
+        <input class="type" type="checkbox" value="plyometrics" id="plyometrics">
+        <label for="plyometrics">Plyometrics</label>
+        <input class="type" type="checkbox" value="powerlifting" id="powerlifting">
+        <label for="powerlifting">Powerlifting</label>
+        <input class="type" type="checkbox" value="strength" id="strength">
+        <label for="strength">Strength</label>
+        <input class="type" type="checkbox" value="stretching" id="stretching">
+        <label for="stretching">Stretching</label>
+        <input class="type" type="checkbox" value="strongman" id="strongman">
+        <label for="strongman">Strongman</label>
+    </fieldset>
+
+    <fieldset id="muscle">
+      <legend>Select a muscle group:</legend>
+        <input class="muscle" type="checkbox" value="abdominal" id="abdominal" checked>
+        <label for="abdominal">Abdominal</label>
+        <input class="muscle" type="checkbox" value="abductors" id="abductors">
+        <label for="abductors">Abductors</label>
+        <input class="muscle" type="checkbox" value="adductors" id="adductors">
+        <label for="adductors">Adductors</label>
+        <input class="muscle" type="checkbox" value="biceps" id="biceps">
+        <label for="biceps">Biceps</label>
+        <input class="muscle" type="checkbox" value="calves" id="calves">
+        <label for="calves">Calves</label>
+        <input class="muscle" type="checkbox" value="chest" id="chest">
+        <label for="chest">Chest</label>
+        <input class="muscle" type="checkbox" value="forearms" id="forearms">
+        <label for="forearms">Forearms</label>
+        <input class="muscle" type="checkbox" value="glutes" id="glutes">
+        <label for="glutes">Glutes</label>
+        <input class="muscle" type="checkbox" value="hamstring" id="hamstrings">
+        <label for="hamstrings">Hamstrings</label>
+        <input class="muscle" type="checkbox" value="lats" id="lats">
+        <label for="lats">Lats</label>
+        <input class="muscle" type="checkbox" value="lowerBack" id="lowerBack">
+        <label for="lowerBack">Lower Back</label>
+        <input class="muscle" type="checkbox" value="middleBack" id="middleBack">
+        <label for="middleBack">Middle Back</label>
+        <input class="muscle" type="checkbox" value="neck" id="neck">
+        <label for="neck">Neck</label>
+        <input class="muscle" type="checkbox" value="quadriceps" id="quadriceps">
+        <label for="quadriceps">Quadriceps</label>
+        <input class="muscle" type="checkbox" value="traps" id="traps">
+        <label for="traps">Traps</label>
+        <input class="muscle" type="checkbox" value="triceps" id="triceps">
+        <label for="triceps">Triceps</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Select a difficulty level:</legend>
+        <input name="difficulty" type="radio" value="beginner" id="difficulty" checked>
+        <label for="beginner">Beginner</label>
+        <input name="difficulty" type="radio" value="intermediate" id="difficulty">
+        <label for="intermediate">Intermediate</label>
+        <input name="difficulty" type="radio" value ="expert" id="difficulty">
+        <label for="expert">Expert</label>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  
+  <div>
+    <h3>Suggested Workouts:</h3>
+    <ul class="apiWorkouts">
+    <% //for(var i=0; i<workouts.length; i++) {%>
+      <li class="apiWorkout">
+        <span></span>
+        <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+        <button>Add to My Workouts</button>
+      </li>
+    <% //} %>
+    </ul>
+  </div> -->
+
+<!-- <div>
+    <ul id="apiWorkouts"></ul>
+    <button>Add to My Workouts</button>
+  </div>
+  <div> -->
+
+  <div>
+    <h3>My Workouts:</h3>
+    <ul class="wokouts">
+    <% for(var i=0; i<workouts.length; i++) {%>
+      <li class="workout">
+        <a href="workouts[i].name"><span><%= workouts[i].name %></span></a>
+        <span><%= workouts[i].type %></span>
+        <span><%= workouts[i].muscle %></span>
+        <span><%= workouts[i].equipment %></span>
+        <span><%= workouts[i].difficulty %></span>
+        <span><%= workouts[i].thumbUp %></span>
+        <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+        <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+        <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+      </li>
+    <% } %>
+    </ul>
+  </div>
+
+  <h2>Add a new workout</h2>
+  <form action="/workouts" method="POST">
+    <input type="text" placeholder="name" name="name" value="">
+    <input type="text" placeholder="type" name="type" value="">
+    <input type="text" placeholder="muscle" name="muscle" value="">
+    <input type="text" placeholder="equipment" name="equipment" value="">
+    <input type="text" placeholder="difficulty" name="difficulty" value="">
+    <input type="text" placeholder="instruction" name="instructions" value="">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
