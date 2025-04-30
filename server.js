@@ -37,6 +37,7 @@ app.post('/workouts', (req, res) => {
     muscle: req.body.muscle, 
     equipment: req.body.equipment, 
     difficulty: req.body.difficulty,
+    instructions: req.body.instructions,
     thumbUp: 0, 
     thumbDown:0}, (err, result) => {
     if (err) return console.log(err)
